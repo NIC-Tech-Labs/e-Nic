@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tete",
-    "slug": "tete",
+    "name": "NICApp",
+    "slug": "NIC",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
