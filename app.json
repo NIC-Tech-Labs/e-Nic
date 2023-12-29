@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "NICApp",
-    "slug": "NIC",
+    "name": "e-Nic",
+    "slug": "e-Nic",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
