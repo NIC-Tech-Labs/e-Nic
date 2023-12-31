@@ -20,10 +20,12 @@ export function ForgotPassword() {
       <LogoSVG />
 
       <Content>
-        <Title>Recuperar de senha</Title>
+        <Title>Recuperação de senha</Title>
+        <SubTitle style={{ width: '100%' }}>
+          Informe seu e-mail ou número de telefone móvel
+        </SubTitle>
         <SubTitle>
-          Informe seu e-mail ou número de telefone móvel Enviaremos um código
-          para autenticação
+          Enviaremos um código para autenticação
         </SubTitle>
 
         <MethodContainer>
@@ -37,15 +39,18 @@ export function ForgotPassword() {
         </MethodContainer>
 
         <TextInput
-          label="Digite seu E-mail"
-          placeholder="Digite seu E-mail"
-          leftComponent={<At size={16} color="#30973B" />}
+          label="Recuperação via e-mail"
+          placeholder="Digite seu endereço e-mail"
+          style={{ width: '90%' }}
+          leftComponent={<At weight='bold' size={20} color="#30973B" />}
         />
       </Content>
 
       <Button
-        title="INICIAR SESSÃO"
-        rightComponent={<Keyhole size={16} color="#FFFF" />}
+        title="ENVIAR CÓDIGO"
+        activeOpacity={0.75}
+        style={{ position: 'absolute', top: '95%', width: '90%' }}
+        rightComponent={<Keyhole weight='fill' size={20} color="#FFFF" />}
       />
     </Container>
   )

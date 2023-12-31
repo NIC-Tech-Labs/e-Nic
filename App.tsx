@@ -1,4 +1,4 @@
-/* eslint-disable camelcase */
+/* eslint-disable react/react-in-jsx-scope */
 import {
   DMSans_400Regular,
   DMSans_500Medium,
@@ -7,8 +7,9 @@ import {
 } from '@expo-google-fonts/dm-sans'
 import { Routes } from '@routes'
 import { StatusBar } from 'expo-status-bar'
-import { ThemeProvider } from 'styled-components/native'
+import { ThemeProvider } from 'styled-components'
 import theme from './src/theme'
+import * as navBar from 'expo-navigation-bar'
 
 export default function App() {
   const [Fonts] = useFonts({
@@ -17,13 +18,15 @@ export default function App() {
     DMSans_700Bold,
   })
 
+  navBar.setBackgroundColorAsync('white')
+
   if (!Fonts) {
     return null
   }
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar style="auto" />
+      <StatusBar translucent />
       <Routes />
     </ThemeProvider>
   )

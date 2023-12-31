@@ -10,13 +10,14 @@ export const Container = styled.View`
 
 export const Label = styled.Text`
   margin-bottom: 8px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.bold};
 `
 
 export const ContentInput = styled.View<Props>`
   flex-direction: row;
   align-items: center;
-  border-radius: 6px;
-  border-width: 1px;
+  border-radius: 10px;
+  border-width: 1.5px;
   border-color: ${({ theme }) => theme.COLORS.GRAY_400};
 
   ${({ errorMessage }) =>
@@ -31,6 +32,7 @@ export const RNTextInput = styled.TextInput`
   padding-top: 8px;
   padding-bottom: 8px;
   padding-right: 12px;
+  font-family: ${({ theme }) => theme.FONT_FAMILY.medium};
 `
 
 export const LeftComponent = styled.View`

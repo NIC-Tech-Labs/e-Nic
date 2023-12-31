@@ -18,7 +18,6 @@ export const Content = styled.View`
 export const Title = styled.Text`
   font-size: 26px;
   margin-bottom: 16px;
-  text-align: center;
   color: ${({ theme }) => theme.COLORS.GRAY_500};
   font-family: ${({ theme }) => theme.FONT_FAMILY.bold};
 `

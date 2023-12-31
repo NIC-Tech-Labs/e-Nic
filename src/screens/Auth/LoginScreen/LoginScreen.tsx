@@ -17,11 +17,15 @@ import {
 import FacebookSVG from '@assets/logoFacebook.svg'
 import GoogleSVG from '@assets/logoGoogle.svg'
 import { AuthScreenProps } from '@routes'
+import theme from '@theme'
 
 export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
   function handleForgotPassword() {
     navigation.navigate('ForgotPassword')
   }
+
+  const iconColour = theme.COLORS.GRAY_400
+  const iconSize = 20
 
   return (
     <Container>
@@ -30,16 +34,16 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
       <Content>
         <TextInput
           label="Email"
-          placeholder="teste"
-          leftComponent={<Envelope size={16} />}
+          placeholder="Digite seu e-mail"
+          leftComponent={<Envelope size={iconSize} color={iconColour} />}
         />
         <TextInput
-          label="Email"
-          placeholder="teste"
-          leftComponent={<Key size={16} />}
+          label="Senha"
+          placeholder="Digite sua senha"
+          leftComponent={<Key size={iconSize} color={iconColour}/>}
         />
 
-        <Button title="INICIAR SESSÃO" />
+        <Button activeOpacity={0.8} title="INICIAR SESSÃO" />
 
         <View
           style={{
@@ -74,11 +78,11 @@ export function LoginScreen({ navigation }: AuthScreenProps<'LoginScreen'>) {
         </OrSection>
 
         <SocialContainer>
-          <SocialButton style={$Shadow}>
+          <SocialButton style={$Shadow} activeOpacity={0.65}>
             <GoogleSVG />
           </SocialButton>
 
-          <SocialButton style={$Shadow}>
+          <SocialButton style={$Shadow} activeOpacity={0.65}>
             <FacebookSVG />
           </SocialButton>
         </SocialContainer>
