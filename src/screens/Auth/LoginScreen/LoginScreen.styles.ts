@@ -31,8 +31,7 @@ export const OrSection = styled.View`
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 16px 0;
-  padding: 0 16px;
+  margin: 32px 0;
 `
 
 export const OrText = styled.Text`
@@ -43,15 +42,16 @@ export const OrText = styled.Text`
 `
 
 export const Separator = styled.View`
-  height: 1px;
-  width: 100%;
+  height: 1.5px;
+  width: 28%;
   background-color: ${({ theme }) => theme.COLORS.GRAY_300};
 `
 
 export const SocialContainer = styled.View`
   flex-direction: row;
-  justify-content: space-evenly;
-  margin: 16px 0;
+  column-gap: 32px;
+  justify-content: center;
+  margin: 8px 0;
 `
 
 export const SocialButton = styled.TouchableOpacity`
