@@ -1,7 +1,9 @@
 /* eslint-disable no-undef */
-import { getDefaultConfig } from 'expo/metro-config'
+/* eslint-disable @typescript-eslint/no-var-requires */
 
-export default (() => {
+const { getDefaultConfig } = require('expo/metro-config')
+
+module.exports = (async () => {
   const config = getDefaultConfig(__dirname)
 
   const { transformer, resolver } = config
